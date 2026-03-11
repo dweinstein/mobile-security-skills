@@ -51,7 +51,7 @@ recording, shoulder surfing, or overlay attacks.
   - Verify SQL injection protection in `query()`, `update()`, `delete()` methods
   - Check path-traversal in `openFile()`
 - **Broadcast Receivers**: Check for `registerReceiver` with sensitive data
-  - Verify `LocalBroadcastManager` for internal broadcasts (deprecated; use LiveData/Flow)
+  - Flag `LocalBroadcastManager` usage as legacy and prefer modern in-process patterns where applicable
   - Check `android:permission` on exported receivers
 - **Services**: Verify bound service authentication, AIDL security
 - **PendingIntents**: Search for `PendingIntent` — verify `FLAG_IMMUTABLE` usage

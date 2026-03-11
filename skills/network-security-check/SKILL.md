@@ -29,8 +29,9 @@ traffic is allowed, and certificate validation is not disabled.
 
 ### MASVS-NETWORK-2: The app performs identity pinning
 
-Verify the app pins certificates or public keys for all endpoints under the
-developer's control, restricting trust beyond OS-trusted CAs.
+Assess whether certificate or public-key pinning is appropriate for endpoints
+under the developer's control, and verify the implementation if pinning is used
+for high-risk traffic.
 
 ## Audit Procedure
 
@@ -81,11 +82,12 @@ Search for:
 
 ### Step 4: Certificate Pinning Assessment
 
-- Verify pins exist for all first-party API domains
-- Check for backup pins (required for rotation)
-- Verify pin expiration handling
-- Check for pinning in all network libraries used (not just one)
-- Verify pinning cannot be bypassed via proxy configuration
+- Determine whether pinning is appropriate for the app's risk profile and operational model before treating its absence as a finding
+- If pinning is implemented, verify pins exist for first-party API domains in scope
+- Check for backup pins and a workable rotation strategy
+- Verify pin expiration or renewal handling does not create avoidable outages
+- Check for pinning in all relevant network libraries used (not just one)
+- Verify pinning cannot be trivially bypassed via debug-only or proxy-specific configuration in production builds
 
 ### Step 5: MASTG Test Mapping
 

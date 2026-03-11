@@ -44,14 +44,14 @@ Verify all data from external sources (UI, IPC, network, filesystem) is properly
 
 #### Android
 - Check `build.gradle` / `build.gradle.kts` for:
-  - `minSdkVersion` — should be >= 28 (Android 9) minimum; >= 29 recommended
-  - `targetSdkVersion` / `compileSdkVersion` — should target the latest stable API level
-- Flag deprecated API usage that indicates targeting old platform versions
+  - `minSdkVersion` / `minSdk` — flag versions that are no longer appropriate for the app's security requirements, regulatory obligations, or dependency stack
+  - `targetSdkVersion` / `targetSdk` / `compileSdk` — verify the app is maintained close to the current stable API level and is not lagging far behind platform security changes
+- Flag deprecated or removed API usage that indicates reliance on obsolete platform behavior
 
 #### iOS
 - Check project settings or `Podfile` for:
-  - Minimum deployment target — should be iOS 15+ minimum; iOS 16+ recommended
-  - Check for deprecated API usage (`UIWebView`, etc.)
+  - Minimum deployment target — verify it aligns with the team's support policy, current security expectations, and third-party dependency requirements
+  - Check for deprecated or removed APIs (`UIWebView`, legacy crypto/network APIs, etc.)
 
 ### Step 2: Forced Update Mechanism
 
@@ -119,7 +119,7 @@ Produce a structured report with:
 
 1. **Platform Version Assessment** — Min/target SDK versions and compliance
 2. **Update Mechanism Assessment** — Forced update capability analysis
-3. **Dependency Inventory** — All third-party dependencies with version, last update, known CVEs
+3. **Dependency Inventory** — All third-party dependencies with version, maintenance signal, and known CVEs where verified
 4. **Input Validation Findings** — Each injection vector with severity, MASTG test, file:line, remediation
 5. **Findings Summary** — Consolidated findings table
 6. **Compliance Summary** — Pass/Fail for MASVS-CODE-1 through CODE-4

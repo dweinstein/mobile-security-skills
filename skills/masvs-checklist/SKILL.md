@@ -38,6 +38,7 @@ Analyze the codebase to determine:
 
 Generate the checklist using the following template for EACH applicable control.
 Mark controls as Required/Recommended/Optional based on the app's risk profile.
+Treat the priorities below as defaults to be adjusted for the app's threat model, regulatory obligations, deployment model, and platform constraints.
 
 ## Checklist Template
 
@@ -107,12 +108,13 @@ Mark controls as Required/Recommended/Optional based on the app's risk profile.
 
 ### Step 3: Pre-Populate Status from Code Analysis
 
-For each checklist item, scan the codebase for evidence of implementation:
-- Mark as "Implemented" if clear evidence exists
+For each checklist item, scan the codebase for preliminary evidence of implementation:
+- Mark as "Likely Implemented" if clear evidence exists in source or configuration
 - Mark as "Partial" if some controls exist but gaps remain
-- Mark as "Missing" if no evidence of the control
+- Mark as "No Evidence Found" if no evidence of the control is visible in the codebase
 - Mark as "N/A" if the control doesn't apply to this app
-- Add specific file:line references for implemented controls
+- Add specific file:line references for visible evidence
+- Do not claim full compliance where dynamic testing, backend behavior, production configuration, or store metadata are required to validate the control
 
 ### Step 4: Gap Analysis
 

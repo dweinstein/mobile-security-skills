@@ -89,7 +89,7 @@ Search for jailbreak detection:
 
 #### iOS
 - **Symbol Stripping**: Verify `STRIP_INSTALLED_PRODUCT = YES` in build settings
-- **Bitcode**: Check bitcode settings
+- **Release Artifact Hygiene**: Verify release builds do not ship unnecessary debug symbols, development diagnostics, or other metadata that simplify reverse engineering
 - **String Obfuscation**: Check for string encryption of sensitive constants
 - **Swift Metadata**: Verify reflection metadata is minimized
 

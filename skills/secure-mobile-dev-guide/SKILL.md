@@ -23,7 +23,7 @@ The developer is asking about: `$ARGUMENTS`
 ## Guidelines Database
 
 When the developer asks about a topic, provide guidance from the relevant categories below.
-Always include the MASVS control reference and practical code examples for both Android and iOS.
+Include the MASVS control reference and practical code examples when they add value, prioritizing the platform the developer is using and adding the other platform when useful for comparison.
 
 ### 1. Secure Data Storage
 
@@ -32,7 +32,7 @@ Always include the MASVS control reference and practical code examples for both 
 - Never store sensitive data in SharedPreferences (Android) or UserDefaults (iOS) without encryption
 - Use EncryptedSharedPreferences (Android) or Keychain with appropriate protection class (iOS)
 - Use SQLCipher for encrypted databases, never store PII in plaintext SQLite
-- Set `android:allowBackup="false"` or configure backup rules to exclude sensitive data
+- Configure Android backup behavior intentionally; if backups are enabled, exclude sensitive data with backup rules
 - Use `NSFileProtectionComplete` for sensitive files on iOS
 - Never log sensitive data — use build-type checks to strip debug logging in release
 - Clear sensitive data from memory when no longer needed
@@ -69,7 +69,7 @@ Always include the MASVS control reference and practical code examples for both 
 - Enforce TLS 1.2+ for all network communication
 - Configure Network Security Config (Android) with `cleartextTrafficPermitted="false"`
 - Enable App Transport Security (iOS) — never set `NSAllowsArbitraryLoads` to true in production
-- Implement certificate pinning for first-party API endpoints with backup pins
+- Assess certificate pinning for first-party high-risk endpoints and implement it with backup pins where the operational tradeoff makes sense
 - Never implement custom TrustManagers that skip certificate validation
 - Validate hostnames — never implement HostnameVerifier that returns true unconditionally
 - Use `wss://` for WebSocket connections, never `ws://`

@@ -55,7 +55,7 @@ Search the codebase for patterns indicating sensitive data handling:
 - **External Storage**: Search for `Environment.getExternalStorageDirectory`, `WRITE_EXTERNAL_STORAGE` — flag any sensitive data on external storage
 - **Keystore**: Verify `AndroidKeyStore` is used for cryptographic key storage
 - **EncryptedSharedPreferences**: Check if Jetpack Security library is used for sensitive preferences
-- **Backup**: Check `android:allowBackup` in AndroidManifest.xml — should be `false` or use `android:fullBackupContent` rules to exclude sensitive data
+- **Backup**: Check `android:allowBackup`, `android:dataExtractionRules`, and `android:fullBackupContent` — verify backup behavior is intentional and sensitive data is excluded when backups are enabled
 - **Logging**: Search for `Log.d`, `Log.v`, `Log.i`, `Log.e`, `Log.w`, `System.out.print`, `println` — flag sensitive data in log statements
 - **Clipboard**: Search for `ClipboardManager`, `setPrimaryClip` — flag sensitive data copied to clipboard
 - **Keyboard Cache**: Check for `android:inputType="textNoSuggestions"` on sensitive input fields

@@ -57,7 +57,7 @@ Map the complete authentication architecture:
 - **Token Storage**: Verify tokens are stored in platform secure storage (Keychain/KeyStore), not SharedPreferences/UserDefaults
 - **Token Expiration**: Check access token TTL (should be short-lived), refresh token rotation
 - **Session Management**: Verify server-side session invalidation on logout, token revocation
-- **Certificate Pinning on Auth Endpoints**: Critical for authentication traffic
+- **Transport Protection for Auth Endpoints**: Verify strong TLS and certificate validation; assess whether pinning is warranted for first-party high-risk endpoints rather than treating it as universally required
 
 ### Step 3: Local Authentication Checks
 
