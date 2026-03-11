@@ -108,6 +108,12 @@ Search for jailbreak detection:
 - **Cycript/Substrate Detection**: Check for MobileSubstrate detection
 - **Simulator Detection**: Check for simulator environment detection
 
+#### Dynamic Validation Guidance
+- Use Frida to validate whether anti-debug, jailbreak/root, and hook-detection controls are actually effective or can be bypassed trivially
+- Use `r2frida` when you need interactive tracing, memory inspection, or function patching against a live process
+- Use `radare2` for static triage of native code, strings, and control flow before or after dynamic instrumentation
+- Document the exact bypass path, instrumentation hooks, and any conditions required for successful evasion
+
 ### Step 5: MASTG Test Mapping
 
 | Test ID | Description |

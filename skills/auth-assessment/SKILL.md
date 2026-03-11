@@ -76,6 +76,10 @@ Map the complete authentication architecture:
 - Verify `LAPolicy` is not bypassed by hooking `evaluatePolicy` callback
 - Check for `evaluatedPolicyDomainState` to detect biometric enrollment changes
 
+Where local authentication strength is security-critical, recommend dynamic
+validation with Frida or `r2frida` to confirm biometric callbacks, Keychain
+gates, and step-up flows cannot be bypassed with simple runtime hooks.
+
 ### Step 4: Step-Up Authentication
 
 Identify sensitive operations and verify they require additional authentication:

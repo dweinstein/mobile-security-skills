@@ -80,6 +80,10 @@ Search for:
 - `SecTrustEvaluateWithError` result being ignored
 - `@SuppressLint("TrustAllX509TrustManager")` annotations
 
+When static review is inconclusive, recommend dynamic validation with Frida or
+`r2frida` to observe trust-decision paths at runtime and confirm whether pinning
+or certificate validation can be bypassed in production builds.
+
 ### Step 4: Certificate Pinning Assessment
 
 - Determine whether pinning is appropriate for the app's risk profile and operational model before treating its absence as a finding
@@ -88,6 +92,7 @@ Search for:
 - Verify pin expiration or renewal handling does not create avoidable outages
 - Check for pinning in all relevant network libraries used (not just one)
 - Verify pinning cannot be trivially bypassed via debug-only or proxy-specific configuration in production builds
+- Use Frida or `r2frida` to validate real runtime pinning coverage when static inspection does not show the full call path
 
 ### Step 5: MASTG Test Mapping
 
