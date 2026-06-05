@@ -102,18 +102,38 @@ recording, shoulder surfing, or overlay attacks.
 
 ### Step 5: MASTG Test Mapping
 
-| Test ID | Description |
-|---------|-------------|
-| MASTG-TEST-0007 | Testing Deep Links (Android) |
-| MASTG-TEST-0008 | Testing URL Schemes (Android) |
-| MASTG-TEST-0028 | Testing WebView Protocol Handlers (Android) |
-| MASTG-TEST-0029 | Testing JavaScript Execution in WebViews (Android) |
-| MASTG-TEST-0030 | Testing WebView Content (Android) |
-| MASTG-TEST-0056 | Testing Universal Links (iOS) |
-| MASTG-TEST-0075 | Testing WebView Protocol Handlers (iOS) |
-| MASTG-TEST-0077 | Testing JavaScript Execution in WebViews (iOS) |
-| MASTG-TEST-0250 | Exported Content Provider (Android) |
-| MASTG-TEST-0251 | Exported Broadcast Receiver (Android) |
+| Test ID | Description | MASWE IDs |
+|---------|-------------|-----------|
+| MASTG-TEST-0007 | Testing Deep Links (Android) | MASWE-0058 |
+| MASTG-TEST-0008 | Testing URL Schemes (Android) | MASWE-0058 |
+| MASTG-TEST-0028 | Testing WebView Protocol Handlers (Android) | MASWE-0069, MASWE-0071 |
+| MASTG-TEST-0029 | Testing JavaScript Execution in WebViews (Android) | MASWE-0068, MASWE-0070 |
+| MASTG-TEST-0030 | Testing WebView Content (Android) | MASWE-0071, MASWE-0072 |
+| MASTG-TEST-0056 | Testing Universal Links (iOS) | MASWE-0058 |
+| MASTG-TEST-0075 | Testing WebView Protocol Handlers (iOS) | MASWE-0069, MASWE-0071 |
+| MASTG-TEST-0077 | Testing JavaScript Execution in WebViews (iOS) | MASWE-0068, MASWE-0070 |
+| MASTG-TEST-0250 | Exported Content Provider (Android) | MASWE-0064 |
+| MASTG-TEST-0251 | Exported Broadcast Receiver (Android) | MASWE-0063 |
+
+### MASWE Weakness Reference (MASVS-PLATFORM)
+
+| MASWE ID | Weakness |
+|----------|---------|
+| MASWE-0053 | Sensitive Data Leaked via the User Interface |
+| MASWE-0054 | Sensitive Data Leaked via Notifications |
+| MASWE-0055 | Sensitive Data Leaked via Screenshots or Screen Recordings |
+| MASWE-0056 | Tapjacking Attacks |
+| MASWE-0058 | Insecure Deep Links |
+| MASWE-0059 | Use of Unauthenticated Platform IPC |
+| MASWE-0062 | Insecure Services |
+| MASWE-0063 | Insecure Broadcast Receivers |
+| MASWE-0064 | Insecure Content Providers |
+| MASWE-0066 | Insecure Intents |
+| MASWE-0068 | JavaScript Bridges in WebViews |
+| MASWE-0069 | WebViews Allows Access to Local Resources |
+| MASWE-0070 | JavaScript Loaded from Untrusted Sources |
+| MASWE-0071 | WebViews Loading Content from Untrusted Sources |
+| MASWE-0072 | Universal XSS |
 
 ## Output Format
 
@@ -123,5 +143,5 @@ Produce a structured report with:
 2. **WebView Inventory** — Each WebView instance with its configuration
 3. **Deep Link Analysis** — All registered schemes/links and their handlers
 4. **UI Security Assessment** — Screenshot, overlay, and data exposure protections
-5. **Findings** — Severity, MASVS control, MASTG test ID, file:line, code snippet, remediation
+5. **Findings** — Severity, MASVS control, MASTG test ID, MASWE ID(s), file:line, code snippet, remediation
 6. **Compliance Summary** — Pass/Fail for MASVS-PLATFORM-1, PLATFORM-2, PLATFORM-3

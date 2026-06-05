@@ -103,15 +103,32 @@ Search for injection vulnerability patterns:
 
 ### Step 5: MASTG Test Mapping
 
-| Test ID | Description |
-|---------|-------------|
-| MASTG-TEST-0025 | Testing for Injection Flaws (Android) |
-| MASTG-TEST-0026 | Testing for URL Loading in WebViews (Android) |
-| MASTG-TEST-0036 | Testing Object Persistence (Android) |
-| MASTG-TEST-0222 | Outdated Third-Party Dependencies |
-| MASTG-TEST-0245 | Input Validation Issues |
-| MASTG-TEST-0272 | Minimum SDK Version Check |
-| MASTG-TEST-0274 | Forced App Update Mechanism |
+| Test ID | Description | MASWE IDs |
+|---------|-------------|-----------|
+| MASTG-TEST-0025 | Testing for Injection Flaws (Android) | MASWE-0079, MASWE-0081, MASWE-0086, MASWE-0087 |
+| MASTG-TEST-0026 | Testing for URL Loading in WebViews (Android) | MASWE-0070, MASWE-0071 |
+| MASTG-TEST-0036 | Testing Object Persistence (Android) | MASWE-0088 |
+| MASTG-TEST-0222 | Outdated Third-Party Dependencies | MASWE-0076 |
+| MASTG-TEST-0245 | Input Validation Issues | MASWE-0079, MASWE-0081, MASWE-0082, MASWE-0083, MASWE-0084 |
+| MASTG-TEST-0272 | Minimum SDK Version Check | MASWE-0077, MASWE-0078 |
+| MASTG-TEST-0274 | Forced App Update Mechanism | MASWE-0075 |
+
+### MASWE Weakness Reference (MASVS-CODE)
+
+| MASWE ID | Weakness |
+|----------|---------|
+| MASWE-0075 | Enforced Updating Not Implemented |
+| MASWE-0076 | Dependencies with Known Vulnerabilities |
+| MASWE-0077 | Running on a Recent Platform Version Not Ensured |
+| MASWE-0078 | Latest Platform Version Not Targeted |
+| MASWE-0079 | Unsafe Handling of Data from the Network |
+| MASWE-0081 | Unsafe Handling of Data From External Interfaces |
+| MASWE-0082 | Unsafe Handling of Data From Local Storage |
+| MASWE-0083 | Unsafe Handling of Data From The User Interface |
+| MASWE-0084 | Unsafe Handling of Data from IPC |
+| MASWE-0086 | SQL Injection |
+| MASWE-0087 | Insecure Parsing and Escaping |
+| MASWE-0088 | Insecure Object Deserialization |
 
 ## Output Format
 
@@ -120,6 +137,6 @@ Produce a structured report with:
 1. **Platform Version Assessment** — Min/target SDK versions and compliance
 2. **Update Mechanism Assessment** — Forced update capability analysis
 3. **Dependency Inventory** — All third-party dependencies with version, maintenance signal, and known CVEs where verified
-4. **Input Validation Findings** — Each injection vector with severity, MASTG test, file:line, remediation
+4. **Input Validation Findings** — Each injection vector with severity, MASTG test, MASWE ID(s), file:line, remediation
 5. **Findings Summary** — Consolidated findings table
 6. **Compliance Summary** — Pass/Fail for MASVS-CODE-1 through CODE-4

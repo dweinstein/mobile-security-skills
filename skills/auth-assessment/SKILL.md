@@ -94,21 +94,35 @@ Search for patterns indicating re-authentication requirements before these opera
 
 ### Step 5: MASTG Test Mapping
 
-| Test ID | Description |
-|---------|-------------|
-| MASTG-TEST-0017 | Testing Biometric Authentication (Android) |
-| MASTG-TEST-0018 | Testing Confirm Credentials (Android) |
-| MASTG-TEST-0064 | Testing Local Authentication (iOS) |
-| MASTG-TEST-0326 | Biometric Authentication Without CryptoObject |
-| MASTG-TEST-0327 | Biometric Key Not Invalidated on Enrollment |
-| MASTG-TEST-0266 | Local Auth with Biometry Without Keychain |
+| Test ID | Description | MASWE IDs |
+|---------|-------------|-----------|
+| MASTG-TEST-0017 | Testing Biometric Authentication (Android) | MASWE-0044, MASWE-0045, MASWE-0046 |
+| MASTG-TEST-0018 | Testing Confirm Credentials (Android) | MASWE-0034 |
+| MASTG-TEST-0064 | Testing Local Authentication (iOS) | MASWE-0044, MASWE-0045 |
+| MASTG-TEST-0326 | Biometric Authentication Without CryptoObject | MASWE-0044 |
+| MASTG-TEST-0327 | Biometric Key Not Invalidated on Enrollment | MASWE-0046 |
+| MASTG-TEST-0266 | Local Auth with Biometry Without Keychain | MASWE-0043 |
+
+### MASWE Weakness Reference (MASVS-AUTH)
+
+| MASWE ID | Weakness |
+|----------|---------|
+| MASWE-0034 | Insecure Implementation of Confirm Credentials |
+| MASWE-0036 | Authentication Material Stored Unencrypted on the Device |
+| MASWE-0038 | Authentication Tokens Not Validated |
+| MASWE-0041 | Authentication Enforced Only Locally Instead of on the Server-side |
+| MASWE-0042 | Authorization Enforced Only Locally Instead of on the Server-side |
+| MASWE-0043 | App Custom PIN Not Bound to Platform KeyStore |
+| MASWE-0044 | Biometric Authentication Can Be Bypassed |
+| MASWE-0045 | Fallback to Non-biometric Credentials Allowed for Sensitive Transactions |
+| MASWE-0046 | Crypto Keys Not Invalidated on New Biometric Enrollment |
 
 ## Output Format
 
 Produce a structured report with:
 
 1. **Authentication Architecture Overview** — Diagram of auth flows identified
-2. **Findings** — Severity, MASVS control, MASTG test ID, file:line, code snippet, remediation
+2. **Findings** — Severity, MASVS control, MASTG test ID, MASWE ID(s), file:line, code snippet, remediation
 3. **Session Management Assessment** — Token lifecycle, storage, and invalidation
 4. **Local Auth Assessment** — Biometric implementation quality and bypass resistance
 5. **Step-Up Auth Coverage** — Which sensitive operations are/aren't protected
