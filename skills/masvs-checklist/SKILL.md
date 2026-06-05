@@ -101,7 +101,7 @@ Treat the priorities below as defaults to be adjusted for the app's threat model
 
 | # | Control | Priority | Status | MASTG Tests | MASWE IDs | Notes |
 |---|---------|----------|--------|-------------|-----------|-------|
-| MASVS-PRIVACY-1 | App minimizes access to sensitive data | Required | Pending | MASTG-TEST-0254, MASTG-TEST-0255 | MASWE-0117 | |
+| MASVS-PRIVACY-1 | App minimizes access to sensitive data | Required | Pending | MASTG-TEST-0206, MASTG-TEST-0254, MASTG-TEST-0255 | MASWE-0108, MASWE-0117 | |
 | MASVS-PRIVACY-2 | App prevents user identification | Tier 3 | Pending | MASTG-TEST-0318 | MASWE-0109, MASWE-0110 | |
 | MASVS-PRIVACY-3 | Transparent data collection/usage | Required | Pending | MASTG-TEST-0256 | MASWE-0111, MASWE-0112, MASWE-0115 | |
 | MASVS-PRIVACY-4 | User control over their data | Tier 3 | Pending | MASTG-TEST-0319 | MASWE-0113, MASWE-0114 | |
