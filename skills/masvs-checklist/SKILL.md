@@ -61,7 +61,7 @@ Treat the priorities below as defaults to be adjusted for the app's threat model
 | # | Control | Priority | Status | MASTG Tests | MASWE IDs | Notes |
 |---|---------|----------|--------|-------------|-----------|-------|
 | MASVS-AUTH-1 | Secure authentication/authorization protocols | Required | Pending | MASTG-TEST-0017, MASTG-TEST-0064 | MASWE-0038, MASWE-0041, MASWE-0042 | |
-| MASVS-AUTH-2 | Secure local authentication | Required | Pending | MASTG-TEST-0018, MASTG-TEST-0326, MASTG-TEST-0266 | MASWE-0034, MASWE-0043, MASWE-0044, MASWE-0045 | |
+| MASVS-AUTH-2 | Secure local authentication | Required | Pending | MASTG-TEST-0018, MASTG-TEST-0326, MASTG-TEST-0266 | MASWE-0034, MASWE-0036, MASWE-0043, MASWE-0044, MASWE-0045 | |
 | MASVS-AUTH-3 | Additional auth for sensitive operations | Tier 3 | Pending | MASTG-TEST-0327 | MASWE-0029, MASWE-0030, MASWE-0046 | |
 
 ### MASVS-NETWORK: Network Communication
@@ -75,7 +75,7 @@ Treat the priorities below as defaults to be adjusted for the app's threat model
 
 | # | Control | Priority | Status | MASTG Tests | MASWE IDs | Notes |
 |---|---------|----------|--------|-------------|-----------|-------|
-| MASVS-PLATFORM-1 | App uses IPC mechanisms securely | Required | Pending | MASTG-TEST-0007, MASTG-TEST-0008, MASTG-TEST-0250, MASTG-TEST-0251 | MASWE-0058, MASWE-0059, MASWE-0063, MASWE-0064, MASWE-0066 | |
+| MASVS-PLATFORM-1 | App uses IPC mechanisms securely | Required | Pending | MASTG-TEST-0007, MASTG-TEST-0008, MASTG-TEST-0250, MASTG-TEST-0251 | MASWE-0058, MASWE-0059, MASWE-0062, MASWE-0063, MASWE-0064, MASWE-0066 | |
 | MASVS-PLATFORM-2 | App uses WebViews securely | Required | Pending | MASTG-TEST-0028, MASTG-TEST-0029, MASTG-TEST-0075, MASTG-TEST-0077 | MASWE-0068, MASWE-0069, MASWE-0070, MASWE-0071, MASWE-0072 | |
 | MASVS-PLATFORM-3 | App uses the user interface securely | Tier 3 | Pending | MASTG-TEST-0035, MASTG-TEST-0289 | MASWE-0053, MASWE-0054, MASWE-0055, MASWE-0056 | |
 

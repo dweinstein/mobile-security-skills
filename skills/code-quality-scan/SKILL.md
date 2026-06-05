@@ -106,7 +106,7 @@ Search for injection vulnerability patterns:
 | Test ID | Description | MASWE IDs |
 |---------|-------------|-----------|
 | MASTG-TEST-0025 | Testing for Injection Flaws (Android) | MASWE-0079, MASWE-0081, MASWE-0086, MASWE-0087 |
-| MASTG-TEST-0026 | Testing for URL Loading in WebViews (Android) | MASWE-0070, MASWE-0071 |
+| MASTG-TEST-0026 | Testing Implicit Intents (Android) | MASWE-0066 |
 | MASTG-TEST-0036 | Testing Object Persistence (Android) | MASWE-0088 |
 | MASTG-TEST-0222 | Outdated Third-Party Dependencies | MASWE-0076 |
 | MASTG-TEST-0245 | Input Validation Issues | MASWE-0079, MASWE-0081, MASWE-0082, MASWE-0083, MASWE-0084 |
