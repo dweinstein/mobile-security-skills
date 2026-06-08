@@ -119,7 +119,7 @@ Search for jailbreak detection:
 | Test ID | Description | MASWE IDs |
 |---------|-------------|-----------|
 | MASTG-TEST-0038 | Testing Root Detection (Android) | MASWE-0097 |
-| MASTG-TEST-0039 | Testing Anti-Debugging Detection (Android) | MASWE-0101 |
+| MASTG-TEST-0039 | Testing App Debuggability (Android) | MASWE-0067 |
 | MASTG-TEST-0040 | Testing File Integrity Checks (Android) | MASWE-0104, MASWE-0105 |
 | MASTG-TEST-0041 | Testing Reverse Engineering Tools Detection (Android) | MASWE-0102 |
 | MASTG-TEST-0045 | Testing Obfuscation (Android) | MASWE-0089, MASWE-0090, MASWE-0091 |
@@ -132,6 +132,7 @@ Search for jailbreak detection:
 
 | MASWE ID | Weakness |
 |----------|---------|
+| MASWE-0067 | Debuggable Flag Not Disabled |
 | MASWE-0089 | Code Obfuscation Not Implemented |
 | MASWE-0090 | Resource Obfuscation Not Implemented |
 | MASWE-0091 | Anti-Deobfuscation Techniques Not Implemented |

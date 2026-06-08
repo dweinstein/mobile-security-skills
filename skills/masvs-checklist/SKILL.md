@@ -95,7 +95,7 @@ Treat the priorities below as defaults to be adjusted for the app's threat model
 | MASVS-RESILIENCE-1 | Platform integrity validation | Tier 3 | Pending | MASTG-TEST-0038 | MASWE-0097, MASWE-0098, MASWE-0099, MASWE-0100 | |
 | MASVS-RESILIENCE-2 | Anti-tampering mechanisms | Tier 3 | Pending | MASTG-TEST-0040, MASTG-TEST-0224 | MASWE-0104, MASWE-0105, MASWE-0106, MASWE-0107 | |
 | MASVS-RESILIENCE-3 | Anti-static analysis mechanisms | Tier 3 | Pending | MASTG-TEST-0045, MASTG-TEST-0247 | MASWE-0089, MASWE-0090, MASWE-0091, MASWE-0092, MASWE-0093 | |
-| MASVS-RESILIENCE-4 | Anti-dynamic analysis techniques | Tier 3 | Pending | MASTG-TEST-0039, MASTG-TEST-0263 | MASWE-0101, MASWE-0102, MASWE-0103 | |
+| MASVS-RESILIENCE-4 | Anti-dynamic analysis techniques | Tier 3 | Pending | MASTG-TEST-0039, MASTG-TEST-0263 | MASWE-0067, MASWE-0101, MASWE-0102, MASWE-0103 | |
 
 ### MASVS-PRIVACY: Privacy
 
