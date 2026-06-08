@@ -116,17 +116,35 @@ Search for jailbreak detection:
 
 ### Step 5: MASTG Test Mapping
 
-| Test ID | Description |
-|---------|-------------|
-| MASTG-TEST-0038 | Testing Root Detection (Android) |
-| MASTG-TEST-0039 | Testing Anti-Debugging Detection (Android) |
-| MASTG-TEST-0040 | Testing File Integrity Checks (Android) |
-| MASTG-TEST-0041 | Testing Reverse Engineering Tools Detection (Android) |
-| MASTG-TEST-0045 | Testing Obfuscation (Android) |
-| MASTG-TEST-0224 | Runtime Integrity Checks |
-| MASTG-TEST-0225 | Emulator Detection |
-| MASTG-TEST-0247 | Code Obfuscation Assessment |
-| MASTG-TEST-0263 | Debugger Detection |
+| Test ID | Description | MASWE IDs |
+|---------|-------------|-----------|
+| MASTG-TEST-0038 | Testing Root Detection (Android) | MASWE-0097 |
+| MASTG-TEST-0039 | Testing App Debuggability (Android) | MASWE-0067 |
+| MASTG-TEST-0040 | Testing File Integrity Checks (Android) | MASWE-0104, MASWE-0105 |
+| MASTG-TEST-0041 | Testing Reverse Engineering Tools Detection (Android) | MASWE-0102 |
+| MASTG-TEST-0045 | Testing Obfuscation (Android) | MASWE-0089, MASWE-0090, MASWE-0091 |
+| MASTG-TEST-0224 | Runtime Integrity Checks | MASWE-0107 |
+| MASTG-TEST-0225 | Emulator Detection | MASWE-0099 |
+| MASTG-TEST-0247 | Code Obfuscation Assessment | MASWE-0089, MASWE-0092, MASWE-0093 |
+| MASTG-TEST-0263 | Debugger Detection | MASWE-0101 |
+
+### MASWE Weakness Reference (MASVS-RESILIENCE)
+
+| MASWE ID | Weakness |
+|----------|---------|
+| MASWE-0067 | Debuggable Flag Not Disabled |
+| MASWE-0089 | Code Obfuscation Not Implemented |
+| MASWE-0090 | Resource Obfuscation Not Implemented |
+| MASWE-0091 | Anti-Deobfuscation Techniques Not Implemented |
+| MASWE-0092 | Static Analysis Tools Not Prevented |
+| MASWE-0093 | Debugging Symbols Not Removed |
+| MASWE-0097 | Root/Jailbreak Detection Not Implemented |
+| MASWE-0099 | Emulator Detection Not Implemented |
+| MASWE-0101 | Debugger Detection Not Implemented |
+| MASWE-0102 | Dynamic Analysis Tools Detection Not Implemented |
+| MASWE-0104 | App Integrity Not Verified |
+| MASWE-0105 | Integrity of App Resources Not Verified |
+| MASWE-0107 | Runtime Code Integrity Not Verified |
 
 ## Output Format
 
@@ -137,6 +155,6 @@ Produce a structured report with:
 3. **Anti-Tampering Assessment** — Integrity verification mechanisms and coverage
 4. **Obfuscation Assessment** — Static analysis resistance level
 5. **Anti-Debug/Instrumentation** — Dynamic analysis protections found
-6. **Findings** — Severity, MASVS control, MASTG test ID, file:line, remediation
+6. **Findings** — Severity, MASVS control, MASTG test ID, MASWE ID(s), file:line, remediation
 7. **Hardening Recommendations** — Prioritized list of improvements
 8. **Compliance Summary** — Pass/Fail for MASVS-RESILIENCE-1 through RESILIENCE-4

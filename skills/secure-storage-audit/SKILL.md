@@ -81,19 +81,30 @@ Search the codebase for patterns indicating sensitive data handling:
 
 ### Step 4: MASTG Test Mapping
 
-Map findings to specific MASTG tests:
+Map findings to specific MASTG tests and MASWE weakness IDs:
 
-| Test ID | Description |
-|---------|-------------|
-| MASTG-TEST-0001 | Testing Local Storage for Sensitive Data (Android) |
-| MASTG-TEST-0052 | Testing Local Storage for Sensitive Data (iOS) |
-| MASTG-TEST-0011 | Testing Backups for Sensitive Data (Android) |
-| MASTG-TEST-0058 | Testing Backups for Sensitive Data (iOS) |
-| MASTG-TEST-0003 | Testing Logs for Sensitive Data (Android) |
-| MASTG-TEST-0053 | Testing Logs for Sensitive Data (iOS) |
-| MASTG-TEST-0200 | Sensitive Data in Local Storage |
-| MASTG-TEST-0201 | Sensitive Data in Logs |
-| MASTG-TEST-0202 | Sensitive Data in Backups |
+| Test ID | Description | MASWE IDs |
+|---------|-------------|-----------|
+| MASTG-TEST-0001 | Testing Local Storage for Sensitive Data (Android) | MASWE-0002, MASWE-0006, MASWE-0007 |
+| MASTG-TEST-0052 | Testing Local Storage for Sensitive Data (iOS) | MASWE-0002, MASWE-0006 |
+| MASTG-TEST-0011 | Testing Backups for Sensitive Data (Android) | MASWE-0003, MASWE-0004 |
+| MASTG-TEST-0058 | Testing Backups for Sensitive Data (iOS) | MASWE-0003, MASWE-0004 |
+| MASTG-TEST-0003 | Testing Logs for Sensitive Data (Android) | MASWE-0001 |
+| MASTG-TEST-0053 | Testing Logs for Sensitive Data (iOS) | MASWE-0001 |
+| MASTG-TEST-0200 | Sensitive Data in Local Storage | MASWE-0002, MASWE-0006, MASWE-0007 |
+| MASTG-TEST-0201 | Sensitive Data in Logs | MASWE-0001 |
+| MASTG-TEST-0202 | Sensitive Data in Backups | MASWE-0003, MASWE-0004 |
+
+### MASWE Weakness Reference (MASVS-STORAGE)
+
+| MASWE ID | Weakness |
+|----------|---------|
+| MASWE-0001 | Insertion of Sensitive Data into Logs |
+| MASWE-0002 | Sensitive Data Stored With Insufficient Access Restrictions in Internal Locations |
+| MASWE-0003 | Backup Unencrypted |
+| MASWE-0004 | Sensitive Data Not Excluded From Backup |
+| MASWE-0006 | Sensitive Data Stored Unencrypted in Private Storage Locations |
+| MASWE-0007 | Sensitive Data Stored Unencrypted in Shared Storage Requiring No User Interaction |
 
 ## Output Format
 
@@ -104,6 +115,7 @@ Produce a structured report with:
    - Severity (Critical/High/Medium/Low/Info)
    - MASVS Control (MASVS-STORAGE-1 or MASVS-STORAGE-2)
    - MASTG Test ID
+   - MASWE ID(s)
    - File path and line number
    - Description of the vulnerability
    - Code snippet showing the issue

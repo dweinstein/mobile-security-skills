@@ -96,17 +96,27 @@ or certificate validation can be bypassed in production builds.
 
 ### Step 5: MASTG Test Mapping
 
-| Test ID | Description |
-|---------|-------------|
-| MASTG-TEST-0019 | Testing Data Encryption on the Network (Android) |
-| MASTG-TEST-0020 | Testing Custom Certificate Stores and Pinning (Android) |
-| MASTG-TEST-0021 | Testing the TLS Settings (Android) |
-| MASTG-TEST-0022 | Testing Endpoint Identity Verification (Android) |
-| MASTG-TEST-0065 | Testing Data Encryption on the Network (iOS) |
-| MASTG-TEST-0066 | Testing App Transport Security (iOS) |
-| MASTG-TEST-0068 | Testing Endpoint Identity Verification (iOS) |
-| MASTG-TEST-0217 | Cleartext Traffic (Android) |
-| MASTG-TEST-0233 | Disabled TLS Certificate Validation |
+| Test ID | Description | MASWE IDs |
+|---------|-------------|-----------|
+| MASTG-TEST-0019 | Testing Data Encryption on the Network (Android) | MASWE-0050 |
+| MASTG-TEST-0020 | Testing Custom Certificate Stores and Pinning (Android) | MASWE-0047, MASWE-0052 |
+| MASTG-TEST-0021 | Testing the TLS Settings (Android) | MASWE-0048, MASWE-0050 |
+| MASTG-TEST-0022 | Testing Endpoint Identity Verification (Android) | MASWE-0052 |
+| MASTG-TEST-0065 | Testing Data Encryption on the Network (iOS) | MASWE-0050 |
+| MASTG-TEST-0066 | Testing App Transport Security (iOS) | MASWE-0049, MASWE-0050 |
+| MASTG-TEST-0068 | Testing Endpoint Identity Verification (iOS) | MASWE-0052 |
+| MASTG-TEST-0217 | Cleartext Traffic (Android) | MASWE-0050 |
+| MASTG-TEST-0233 | Disabled TLS Certificate Validation | MASWE-0052 |
+
+### MASWE Weakness Reference (MASVS-NETWORK)
+
+| MASWE ID | Weakness |
+|----------|---------|
+| MASWE-0047 | Insecure Identity Pinning |
+| MASWE-0048 | Insecure Machine-to-Machine Communication |
+| MASWE-0049 | Proven Networking APIs Not Used |
+| MASWE-0050 | Cleartext Traffic |
+| MASWE-0052 | Insecure Certificate Validation |
 
 ## Output Format
 
@@ -114,7 +124,7 @@ Produce a structured report with:
 
 1. **Network Architecture Overview** — Endpoints discovered, protocols used
 2. **TLS Configuration Assessment** — Platform security config analysis
-3. **Findings** — Severity, MASVS control, MASTG test ID, file:line, code snippet, remediation
+3. **Findings** — Severity, MASVS control, MASTG test ID, MASWE ID(s), file:line, code snippet, remediation
 4. **Certificate Pinning Status** — Per-domain pinning coverage
 5. **Cleartext Traffic Inventory** — All non-TLS communication paths found
 6. **Compliance Summary** — Pass/Fail for MASVS-NETWORK-1, NETWORK-2

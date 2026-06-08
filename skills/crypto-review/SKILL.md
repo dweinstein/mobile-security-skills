@@ -89,17 +89,32 @@ Search aggressively for:
 
 ### Step 5: MASTG Test Mapping
 
-| Test ID | Description |
-|---------|-------------|
-| MASTG-TEST-0013 | Testing Symmetric Cryptography (Android) |
-| MASTG-TEST-0014 | Testing Random Number Generation (Android) |
-| MASTG-TEST-0015 | Testing Key Management (Android) |
-| MASTG-TEST-0061 | Testing Symmetric Cryptography (iOS) |
-| MASTG-TEST-0062 | Testing Random Number Generation (iOS) |
-| MASTG-TEST-0063 | Testing Key Management (iOS) |
-| MASTG-TEST-0208 | Use of Weak Cryptographic Algorithms |
-| MASTG-TEST-0212 | Use of Hardcoded Cryptographic Keys in Code |
-| MASTG-TEST-0221 | Insecure Random API Usage |
+| Test ID | Description | MASWE IDs |
+|---------|-------------|-----------|
+| MASTG-TEST-0013 | Testing Symmetric Cryptography (Android) | MASWE-0020, MASWE-0022, MASWE-0023 |
+| MASTG-TEST-0014 | Testing Random Number Generation (Android) | MASWE-0027 |
+| MASTG-TEST-0015 | Testing Key Management (Android) | MASWE-0009, MASWE-0012, MASWE-0013, MASWE-0014 |
+| MASTG-TEST-0061 | Testing Symmetric Cryptography (iOS) | MASWE-0020, MASWE-0022, MASWE-0023 |
+| MASTG-TEST-0062 | Testing Random Number Generation (iOS) | MASWE-0027 |
+| MASTG-TEST-0063 | Testing Key Management (iOS) | MASWE-0009, MASWE-0012, MASWE-0013, MASWE-0014 |
+| MASTG-TEST-0208 | Use of Weak Cryptographic Algorithms | MASWE-0019, MASWE-0020, MASWE-0021 |
+| MASTG-TEST-0212 | Use of Hardcoded Cryptographic Keys in Code | MASWE-0013 |
+| MASTG-TEST-0221 | Insecure Random API Usage | MASWE-0027 |
+
+### MASWE Weakness Reference (MASVS-CRYPTO)
+
+| MASWE ID | Weakness |
+|----------|---------|
+| MASWE-0009 | Improper Cryptographic Key Generation |
+| MASWE-0012 | Insecure or Wrong Usage of Cryptographic Key |
+| MASWE-0013 | Hardcoded Cryptographic Keys in Use |
+| MASWE-0014 | Cryptographic Keys Not Properly Protected at Rest |
+| MASWE-0019 | Risky Cryptography Implementations |
+| MASWE-0020 | Improper Encryption |
+| MASWE-0021 | Improper Hashing |
+| MASWE-0022 | Predictable Initialization Vectors (IVs) |
+| MASWE-0023 | Risky Padding |
+| MASWE-0027 | Improper Random Number Generation |
 
 ## Output Format
 
@@ -107,6 +122,6 @@ Produce a structured report with:
 
 1. **Executive Summary** — Cryptographic posture assessment
 2. **Cryptographic Inventory** — Table of all crypto operations found (algorithm, mode, key size, location)
-3. **Findings** — Each finding with severity, MASVS control, MASTG test ID, file:line, code snippet, and remediation
+3. **Findings** — Each finding with severity, MASVS control, MASTG test ID, MASWE ID(s), file:line, code snippet, and remediation
 4. **Key Management Assessment** — How keys are generated, stored, rotated, and destroyed
 5. **Compliance Summary** — Pass/Fail for MASVS-CRYPTO-1 and MASVS-CRYPTO-2

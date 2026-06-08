@@ -108,14 +108,28 @@ Verify:
 
 ### Step 6: MASTG Test Mapping
 
-| Test ID | Description |
-|---------|-------------|
-| MASTG-TEST-0206 | PII in Network Traffic |
-| MASTG-TEST-0254 | Dangerous Permissions Usage |
-| MASTG-TEST-0255 | Permission Minimization Assessment |
-| MASTG-TEST-0256 | SDK Data Collection Assessment |
-| MASTG-TEST-0318 | Tracking Transparency Compliance |
-| MASTG-TEST-0319 | User Data Deletion Capability |
+| Test ID | Description | MASWE IDs |
+|---------|-------------|-----------|
+| MASTG-TEST-0206 | PII in Network Traffic | MASWE-0108 |
+| MASTG-TEST-0254 | Dangerous Permissions Usage | MASWE-0117 |
+| MASTG-TEST-0255 | Permission Minimization Assessment | MASWE-0117 |
+| MASTG-TEST-0256 | SDK Data Collection Assessment | MASWE-0110, MASWE-0112, MASWE-0113 |
+| MASTG-TEST-0318 | Tracking Transparency Compliance | MASWE-0110, MASWE-0115 |
+| MASTG-TEST-0319 | User Data Deletion Capability | MASWE-0113, MASWE-0114 |
+
+### MASWE Weakness Reference (MASVS-PRIVACY)
+
+| MASWE ID | Weakness |
+|----------|---------|
+| MASWE-0108 | Sensitive Data in Network Traffic |
+| MASWE-0109 | Lack of Anonymization or Pseudonymisation Measures |
+| MASWE-0110 | Use of Unique Identifiers for User Tracking |
+| MASWE-0111 | Inadequate Privacy Policy |
+| MASWE-0112 | Inadequate Data Collection Declarations |
+| MASWE-0113 | Lack of Proper Data Management Controls |
+| MASWE-0114 | Inadequate Data Visibility Controls |
+| MASWE-0115 | Inadequate or Ambiguous User Consent Mechanisms |
+| MASWE-0117 | Inadequate Permission Management |
 
 ## Output Format
 
@@ -127,6 +141,6 @@ Produce a structured report with:
 4. **Identifier Usage Assessment** — All unique identifiers and their scope
 5. **Transparency Assessment** — Privacy policy, consent UX, and declaration accuracy
 6. **User Control Assessment** — Data access, deletion, and preference mechanisms
-7. **Findings** — Severity, MASVS control, MASTG test ID, file:line, remediation
+7. **Findings** — Severity, MASVS control, MASTG test ID, MASWE ID(s), file:line, remediation
 8. **Regulatory Considerations** — GDPR, CCPA, COPPA implications identified
 9. **Compliance Summary** — Pass/Fail for MASVS-PRIVACY-1 through PRIVACY-4
